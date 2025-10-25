@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkat Weather Forecasts & Hazard Prediction System </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5c2e9376a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" style="margin-top: 50px;">
+        <div class="title">
+            <h1>Weather Forecasts & Hazard Prediction System</h1>
+            <div class="nitap_logo"> <h4 style="margin:0%;">NIT ANP</h4> </div>
+            <div class="weblogo"><h5 >Weather</h5>
+            <div class="weblogo_pic"></div>
+            </div>
+        </div>
+        <div class="search-box">
+            <div class="home">
+                <i class="fa-solid fa-house fa-xl"></i>
+            </div>
+            <select id="dropdownMenu">
+                <option value="" disabled selected>Select the State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+            <select id="districtDropdown">
+                <option value="" disabled selected>Select the District</option>
+     
+            </select>
+            <input type="text" id="cityInput" placeholder=" Search City Here...">
+            <button id="searchButton">
+                <i class="fa-solid fa-magnifying-glass-location fa-xl"></i>
+            </button>
+            <div class="home"><i class="fa-solid fa-circle-user fa-2xl"></i></div>
+        </div>
+        <div class="weather-info">
+            <h2 id="cityName"></h2>
+            <p id="date"></p>
+            <div class="temperature">
+                <span id="temp"></span>
+                <span id="conditionIcon"></span>
+                <div class="tempblock"><h6>Temp</h6></div>
+            </div>
+            <div class="details">
+                <div class="detail">
+                    <span class="detail-icon">Humidity <i class="fa-solid fa-droplet fa-flip-horizontal fa-lg" style="color: #74C0FC;"><!-- <h6>45</h6> --></i></span>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">Pressure <i class="fa-duotone fa-solid fa-bars-staggered fa-rotate-90 fa-lg" style="--fa-primary-color: #256fef; --fa-secondary-color: #256fef;"></i></span>
+                    <span id="pressure"></span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">Rain Status <i class="fa-solid fa-cloud-rain"></i></span > 
+                    <span id="rainStatus"></span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">Rain Intensity <i class="fa-solid fa-ruler-vertical fa-lg" style="color: #74C0FC;"></i></span>
+                    <span id="rainIntensity"></span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">Gas Level💨</span>
+                    <span id="gasLevel"></span>
+                </div>
+            </div>
+            <div> 
+                <h3>Disaster index <i class="fa-solid fa-triangle-exclamation fa-xl" style="color: #ff6400;"></i></h3>
+            </div>
+            <div class="disaster-index" id="disaster_index" >
+                <span id="disaster_Index"></span>
+            </div>
+            <h3>EXtreme Alert <i class="fa-solid fa-bell fa-shake fa-lg" style="color: #f5c311;"></i></h3>
+            <div class="alert_message" id="alert_message"></div>
+            <h3>Disaster Alert Message <i class="fa-solid fa-bell fa-shake fa-lg" style="color: #FFD43B;"></i></h3>
+            <div class="disaster-message" id="disaster_message"></div>
+        </div>
+        <h3> Pre Rain Prediction <i class="fa-solid fa-cloud-sun-rain fa-bounce fa-lg" style="color: #74C0FC;"></i></h3>
+        <div class="forecast" id="rain_prediction"> <p class="manage">NO Rain Tommorow</p></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

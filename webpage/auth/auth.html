@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .auth-container {
+            background: white;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .tab-header {
+            display: flex;
+            cursor: pointer;
+            user-select: none;
+        }
+        .tab-header div {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+            background: #e9ecef;
+            transition: 0.3s;
+        }
+        .tab-header .active {
+            background: #007bff;
+            color: white;
+        }
+        .form-container {
+            padding: 24px;
+        }
+        form {
+            display: none;
+            flex-direction: column;
+        }
+        form.active {
+            display: flex;
+        }
+        label {
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 12px;
+            background: #007bff;
+            border: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .form-footer a {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="tab-header">
+            <div id="signInTab" class="active">Sign In</div>
+            <div id="signUpTab">Sign Up</div>
+        </div>
+        <div class="form-container">
+            <form id="signInForm" class="active">
+                <label for="signin-email or Userid">Email or Userid</label>
+                <input type="email" id="signin-email or Userid" placeholder="Enter your email or Userid" required />
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" placeholder="Enter your password" required />
+                <button type="submit">Sign In</button>
+                <div class="form-footer">
+                    Don't have an account? <a id="toSignUp">Sign Up</a>
+                </div>
+            </form>
+            <form id="signUpForm">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" placeholder="Enter your full name" required />
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="Enter your email" required />
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Create a password" required />
+                <label for="signup-confirm-password">Confirm Password</label>
+                <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required />
+                <button type="submit">Sign Up</button>
+                <div class="form-footer">
+                    Already have an account? <a id="toSignIn">Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

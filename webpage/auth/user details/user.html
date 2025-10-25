@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Profile & Activity</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fafb;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 24px;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .profile, .activity {
+            flex: 1 1 400px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            background: #007bff;
+            border-radius: 50%;
+            color: white;
+            font-size: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+        .profile-info h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .profile-info p {
+            margin: 4px 0 0 0;
+            color: #666;
+        }
+        h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .activity-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+        }
+        .activity-list li:last-child {
+            border-bottom: none;
+        }
+        .no-activity {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="profile">
+            <div class="profile-header">
+                <div class="profile-pic" aria-label="User Initials">VU</div>
+                <div class="profile-info">
+                    <h2>Venkat User</h2>
+                    <p>venkat@1234.com</p>
+                </div>
+            </div>
+            <h3>User Profile</h3>
+            <p><strong>Location:</strong> Andhra Pradesh, India</p>
+            <p><strong>Member since:</strong> January 2023</p>
+            <p><strong>Preferred Units:</strong> Celsius</p>
+        </section>
+        <section class="activity">
+            <h3>Recent Activity</h3>
+            <ul class="activity-list">
+                <li>Checked weather forecast for Tadepalligudem on 2024-06-01</li>
+                <li>Set alert for heavy rain in West Godavari</li>
+                <li>Updated profile information on 2024-05-28</li>
+                <li>Viewed disaster index for Andhra Pradesh on 2024-05-27</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
